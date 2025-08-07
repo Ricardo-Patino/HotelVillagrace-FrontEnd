@@ -1,0 +1,209 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Amenities Cards Section
+--------------------------------------------------------------*/
+.amenities-cards {
+  .amenity-card {
+    background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 2%));
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+      &:before {
+        opacity: 1;
+      }
+
+      .amenity-icon i {
+        transform: scale(1.1);
+        color: color-mix(in srgb, var(--accent-color), var(--heading-color) 20%);
+      }
+
+      .feature-tag {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+  }
+
+  .card-header {
+    padding: 40px 35px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--heading-color);
+      flex: 1;
+    }
+  }
+
+  .amenity-icon {
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 32px;
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .amenity-content {
+    padding: 0 35px 35px;
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+    }
+  }
+
+  .amenity-features {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .feature-tag {
+    background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+    color: var(--default-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .amenities-cta {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 90%));
+    border-radius: 20px;
+    padding: 50px 40px;
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+
+    .cta-content {
+      max-width: 600px;
+      margin: 0 auto;
+
+      h5 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 16px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .btn-explore {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+    color: var(--contrast-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 70%);
+
+    &:hover {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), black 10%), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .card-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      padding: 35px 30px 20px;
+
+      h4 {
+        font-size: 22px;
+      }
+    }
+
+    .amenity-content {
+      padding: 0 30px 30px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .amenity-icon {
+      width: 60px;
+      height: 60px;
+
+      i {
+        font-size: 28px;
+      }
+    }
+
+    .card-header {
+      padding: 30px 25px 15px;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    .amenity-content {
+      padding: 0 25px 25px;
+    }
+
+    .amenities-cta {
+      padding: 40px 25px;
+
+      .cta-content h5 {
+        font-size: 24px;
+      }
+
+      .cta-content p {
+        font-size: 15px;
+      }
+    }
+
+    .btn-explore {
+      padding: 14px 32px;
+      font-size: 15px;
+    }
+  }
+}

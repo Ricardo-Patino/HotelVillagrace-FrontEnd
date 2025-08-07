@@ -1,0 +1,207 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Rooms Showcase About Section
+--------------------------------------------------------------*/
+.rooms-showcase-about {
+  .room-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .room-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .room-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(54, 144, 231, 0.9), rgba(54, 144, 231, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-explore {
+      color: var(--contrast-color);
+      background-color: transparent;
+      border: 2px solid var(--contrast-color);
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      transform: translateY(20px);
+
+      &:hover {
+        background-color: var(--contrast-color);
+        color: var(--accent-color);
+      }
+    }
+
+    &:hover {
+      .room-overlay {
+        opacity: 1;
+      }
+
+      .btn-explore {
+        transform: translateY(0);
+      }
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .room-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      color: var(--heading-color);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .room-description {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .room-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .feature-item {
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        i {
+          color: var(--accent-color);
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .room-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .room-price {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+
+        .price-from {
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          font-size: 0.8rem;
+        }
+
+        .price-amount {
+          color: var(--accent-color);
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        .price-period {
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          font-size: 0.85rem;
+        }
+      }
+
+      .btn-view-details {
+        color: var(--accent-color);
+        font-weight: 600;
+        padding: 8px 16px;
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .btn-view-all-rooms {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 15px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--accent-color), black 10%);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .room-content {
+      padding: 20px;
+
+      .room-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+
+        .room-price {
+          justify-content: center;
+        }
+      }
+    }
+
+    .room-features {
+      justify-content: space-between;
+
+      .feature-item {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
