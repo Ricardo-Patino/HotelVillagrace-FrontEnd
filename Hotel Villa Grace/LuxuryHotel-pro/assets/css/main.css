@@ -21,36 +21,36 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #f5f4f1; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #32220b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #917a5a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #1f2937; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #285b4b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #285b4b; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(248, 242, 233, 0.9);  /* The default color of the main navmenu links */
-  --nav-hover-color: rgba(233, 210, 174, 0.7); /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(255, 255, 255, 0.95);  /* The default color of the main navmenu links */
+  --nav-hover-color: rgba(212, 237, 229, 0.95); /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #917a5a; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #1f2937; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #285b4b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #e7e5dd;
-  --surface-color: #fffefb;
+  --background-color: #ffffff;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #0f0d07;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #2e2b28;
+  --background-color: #ffffff;
+  --default-color: #1f2937;
+  --heading-color: #285b4b;
+  --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
@@ -145,8 +145,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
-  --heading-color: #ffffff;
+  --background-color: #ffffff;
+  --heading-color: #285b4b;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
@@ -222,7 +222,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(24, 14, 1, 0.8);
+  --background-color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -1015,7 +1015,7 @@ section,
 
 .hotel-hero .hero-actions .btn.btn-light {
   background-color: var(--accent-color);
-  color: var(--contrsat-color);
+  color: var(--contrast-color);
   border: none;
 }
 
@@ -1183,7 +1183,7 @@ section,
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 15px 30px rgba(54, 144, 231, 0.3);
+  box-shadow: 0 15px 30px rgba(40, 91, 75, 0.3);
   z-index: 3;
 }
 
@@ -1659,7 +1659,7 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(54, 144, 231, 0.8);
+  background-color: rgba(40, 91, 75, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1747,7 +1747,7 @@ section,
 .rooms-showcase .discover-all-btn:hover {
   color: var(--contrast-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(54, 144, 231, 0.3);
+  box-shadow: 0 8px 25px rgba(40, 91, 75, 0.3);
 }
 
 .rooms-showcase .discover-all-btn:hover:before {
@@ -2725,7 +2725,7 @@ section,
 }
 
 .call-to-action .offer-badge {
-  background: linear-gradient(135deg, #28a745, color-mix(in srgb, #28a745, #000 15%));
+  background: linear-gradient(135deg, #285b4b, color-mix(in srgb, #285b4b, #000 15%));
   color: white;
   padding: 8px 20px;
   border-radius: 25px;
@@ -2733,7 +2733,7 @@ section,
   font-weight: 600;
   margin-top: 1rem;
   display: inline-block;
-  box-shadow: 0 4px 15px color-mix(in srgb, #28a745, transparent 60%);
+  box-shadow: 0 4px 15px color-mix(in srgb, #285b4b, transparent 60%);
   animation: pulse 2s infinite;
 }
 
@@ -2821,7 +2821,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(54, 144, 231, 0.9), rgba(45, 70, 94, 0.9));
+  background: linear-gradient(135deg, rgba(40, 91, 75, 0.9), rgba(40, 91, 75, 0.9));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3455,7 +3455,7 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(54, 144, 231, 0.9), rgba(54, 144, 231, 0.7));
+  background: linear-gradient(45deg, rgba(40, 91, 75, 0.9), rgba(40, 91, 75, 0.7));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3761,7 +3761,7 @@ section,
 }
 
 .rooms-2 .room-card .room-image .room-badge.featured {
-  background-color: #28a745;
+  background-color: #285b4b;
 }
 
 .rooms-2 .room-card .room-image .room-badge.luxury {
@@ -7436,4 +7436,119 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+/* ==================================================================
+   Brand Overrides: Verde (#285b4b) + Blanco
+   These overrides ensure a consistent green-white palette throughout.
+   ================================================================== */
+
+:root {
+  --background-color: #ffffff;
+  --default-color: #1f2937;
+  --heading-color: #285b4b;
+  --accent-color: #285b4b;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  --nav-color: rgba(255, 255, 255, 0.95);
+  --nav-hover-color: rgba(212, 237, 229, 0.95);
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #1f2937;
+  --nav-dropdown-hover-color: #285b4b;
+}
+
+/* Header on scroll: solid green glass */
+.scrolled .header {
+  --background-color: rgba(40, 91, 75, 0.92);
+}
+
+/* Hero overlay: subtle brand tint */
+.hotel-hero .hero-overlay {
+  background: linear-gradient(135deg, rgba(40,91,75,0.35) 0%, rgba(40,91,75,0.35) 100%);
+}
+
+/* Events & rooms overlays unified to brand */
+.events-cards .event-card .event-image .event-overlay {
+  background: linear-gradient(135deg, rgba(40,91,75,0.9), rgba(40,91,75,0.9));
+}
+.rooms-showcase-about .room-image .room-overlay {
+  background: linear-gradient(45deg, rgba(40,91,75,0.9), rgba(40,91,75,0.7));
+}
+.rooms-showcase .room-showcase-card.mini .mini-image .mini-overlay {
+  background-color: rgba(40,91,75,0.85);
+}
+
+/* Badges & CTAs tuned to brand */
+.rooms-2 .room-card .room-image .room-badge.featured {
+  background-color: #285b4b;
+  color: #ffffff;
+}
+.call-to-action .offer-badge {
+  background: linear-gradient(135deg, #285b4b, rgba(40,91,75,0.85));
+  box-shadow: 0 4px 15px rgba(40,91,75,0.4);
+}
+
+/* Nav link colors */
+@media (min-width: 1200px) {
+  .navmenu a, .navmenu a:focus {
+    color: var(--nav-color);
+  }
+  .navmenu li:hover > a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+}
+
+/* Vegan/spicy badges harmonized to palette */
+.menu .special-item .menu-item-img .menu-item-badges .badge-vegan {
+  background-color: rgba(40,91,75,0.85);
+  color: #ffffff;
+}
+
+/* Generic box-shadows for primary CTAs using brand hue */
+.gallery-showcase .btn-gallery,
+.call-to-action .btn-cta,
+.rooms-2 .room-card .room-content .room-actions .btn.btn-primary,
+.about-home .about-content .about-actions .btn-discover,
+.amenities-cards .btn-explore,
+.offer-cards .offer-card .offer-content .btn-book,
+.rooms-showcase .room-showcase-card.featured .room-info .room-bottom .explore-btn {
+  box-shadow: 0 8px 25px rgba(40,91,75,0.3);
+}
+
+/* Ensure icons inside colored brand chips are readable */
+.location-cards .location-card .location-content .location-icon i {
+  color: #ffffff;
+}
+
+/* ===============================================================
+   Header legible al cargar (opción A)
+   Fondo blanco inicial + enlaces/elementos en verde de marca.
+   =============================================================== */
+.header:not(.scrolled) {
+  --background-color: #ffffff;
+  --heading-color: #285b4b;
+  --nav-color: #285b4b;
+  --nav-hover-color: #1b3e33;
+}
+
+.header:not(.scrolled) .btn-getstarted,
+.header:not(.scrolled) .btn-getstarted:focus {
+  background: #285b4b;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .header:not(.scrolled) .mobile-nav-toggle { color: #285b4b; }
+}
+
+.scrolled .header {
+  --background-color: rgba(40, 91, 75, 0.92);
+  --heading-color: #ffffff;
+  --nav-color: rgba(255, 255, 255, 0.95);
+  --nav-hover-color: #ffffff;
 }
