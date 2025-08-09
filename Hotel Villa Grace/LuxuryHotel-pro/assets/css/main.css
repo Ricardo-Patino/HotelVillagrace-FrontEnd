@@ -855,6 +855,7 @@ section,
 
 .hotel-hero .hero-text {
   margin-bottom: 3rem;
+  color: #ffffff;
 }
 
 .hotel-hero .hero-text h1 {
@@ -862,11 +863,13 @@ section,
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .hotel-hero .hero-text h1 {
     font-size: 2.5rem;
+    color: #ffffff;
   }
 }
 
@@ -878,11 +881,13 @@ section,
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .hotel-hero .hero-text .hero-subtitle {
     font-size: 1.1rem;
+    color: #ffffff;
   }
 }
 
@@ -912,6 +917,30 @@ section,
   font-size: 1.2rem;
 }
 
+
+.hero-features .feature-item span,
+.hero-features .feature-item i.bi-water,
+.hero-features .feature-item i.bi-wifi,
+.hero-features .feature-item i.bi-car-front {
+    color: #fff !important;
+  }
+
+.hero-stats.text-white .stat-number,
+  .hero-stats.text-white .stat-label {
+    color: #fff !important;
+  }
+  .btn-outline-light.text-white {
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+  .btn-outline-light.text-white:hover {
+    background: #fff !important;
+    color: #285b4b !important;
+  }
+  .small.text-white {
+    color: #fff !important;
+  }
+
 .hotel-hero .booking-card {
   margin-bottom: 3rem;
 }
@@ -929,7 +958,7 @@ section,
 }
 
 .hotel-hero .booking-card .form-label {
-  color: var(--heading-color);
+  color: #ffffff;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -959,16 +988,19 @@ section,
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  
 }
 
 .hotel-hero .booking-card .btn-primary:hover {
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), var(--heading-color) 10%), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
   transform: translateY(-2px);
   box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 60%);
+  
 }
 
 .hotel-hero .booking-card .btn-primary i {
   margin-right: 0.5rem;
+  
 }
 
 .hotel-hero .hero-actions {
