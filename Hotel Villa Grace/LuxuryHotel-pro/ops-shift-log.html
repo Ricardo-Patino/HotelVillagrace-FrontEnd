@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones – Bitácora de Turnos | Hotel Villa Grace</title>
+  <link href="assets/img/favicon.png" rel="icon"><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet"><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"><link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul><li class="dropdown"><a href="#" class="active"><span>Operaciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="ops-dashboard.html">Tablero</a></li><li><a href="ops-shift-log.html" class="active">Bitácora de turnos</a></li>
+          <li><a href="ops-reports.html">Reportes</a></li>
+        </ul></li></ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="ops-reports.html">Exportar</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url(assets/img/hotel/showcase-7.webp);">
+    <div class="container position-relative"><h1>Bitácora de turnos</h1><p>Notas de recepción y operaciones.</p>
+      <nav class="breadcrumbs"><ol><li><a href="ops-dashboard.html">Operaciones</a></li><li class="current">Bitácora</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" data-aos="fade-up">
+
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white border-0"><h5 class="mb-0">Nueva entrada</h5></div>
+        <div class="card-body">
+          <form class="row g-3">
+            <div class="col-md-3"><label class="form-label">Turno</label>
+              <select class="form-select"><option>Mañana</option><option>Tarde</option><option>Noche</option></select>
+            </div>
+            <div class="col-md-3"><label class="form-label">Autor</label><input class="form-control" placeholder="Nombre"></div>
+            <div class="col-md-6"><label class="form-label">Asunto</label><input class="form-control" placeholder="Título breve"></div>
+            <div class="col-12"><label class="form-label">Detalle</label><textarea class="form-control" rows="3"></textarea></div>
+            <div class="col-12 d-flex justify-content-end"><button class="btn btn-success">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-white border-0"><h5 class="mb-0">Historial</h5></div>
+        <div class="card-body">
+          <div class="vstack gap-3">
+            <div class="border rounded-3 p-3">
+              <div class="d-flex justify-content-between">
+                <div><strong>Mañana</strong> · Ana · <span class="text-muted">10:05</span></div>
+                <span class="badge text-bg-success">Abierto</span>
+              </div>
+              <div class="fw-semibold">Grupo Rivera ETA 14:30</div>
+              <div class="text-muted small">3 habitaciones; verificar bloqueos.</div>
+            </div>
+            <div class="border rounded-3 p-3">
+              <div class="d-flex justify-content-between">
+                <div><strong>Noche</strong> · Pedro · <span class="text-muted">Ayer 23:40</span></div>
+                <span class="badge text-bg-secondary">Cerrado</span>
+              </div>
+              <div class="fw-semibold">Auditoría nocturna completada</div>
+              <div class="text-muted small">No hay discrepancias.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/vendor/aos/aos.js"></script><script src="assets/js/main.js"></script>
+</body>
+</html>

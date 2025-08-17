@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturas y recibos | Hotel Villa Grace</title>
+  <meta name="description" content="Descarga facturas y comprobantes de pago.">
+  <link href="assets/img/favicon.png" rel="icon"><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet"><link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="privacy-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="portal-dashboard.html">Portal</a></li>
+        <li><a href="portal-facturas.html" class="active">Facturas</a></li>
+        <li><a href="portal-pagos.html">Pagos</a></li>
+      </ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="portal-pagos.html">Pagar</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url(assets/img/hotel/showcase-7.webp);">
+    <div class="container position-relative">
+      <h1>Facturas y recibos</h1>
+      <p>Descarga tus documentos contables y confirma pagos.</p>
+      <nav class="breadcrumbs"><ol><li><a href="portal-dashboard.html">Portal</a></li><li class="current">Facturas</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section pt-3">
+    <div class="container" data-aos="fade-up">
+      <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead><tr><th>#Factura</th><th>Reserva</th><th>Fecha</th><th>Total</th><th>Estado</th><th></th></tr></thead>
+            <tbody>
+              <tr>
+                <td>INV-24110</td><td>#VG-2025-104</td><td>25 Sep 2025</td><td>$950.82</td>
+                <td><span class="badge bg-success">Pagada</span></td>
+                <td class="text-end">
+                  <a class="btn btn-outline btn-sm" href="#"><i class="bi bi-download me-1"></i>PDF</a>
+                  <a class="btn btn-outline btn-sm" href="#"><i class="bi bi-printer me-1"></i>Imprimir</a>
+                </td>
+              </tr>
+              <tr>
+                <td>INV-24088</td><td>#VG-2024-872</td><td>02 Ago 2024</td><td>$520.00</td>
+                <td><span class="badge bg-secondary">Emitida</span></td>
+                <td class="text-end">
+                  <a class="btn btn-primary btn-sm" href="portal-pagos.html">Pagar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-body border-top">
+          <small class="text-muted">¿Requieres factura electrónica con datos fiscales? Actualiza tu dirección de facturación en <a href="portal-perfil.html">Mi perfil</a>.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong>. Todos los derechos reservados</div></div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

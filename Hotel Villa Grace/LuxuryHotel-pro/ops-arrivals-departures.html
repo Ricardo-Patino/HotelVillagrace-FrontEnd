@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones – Llegadas y Salidas | Hotel Villa Grace</title>
+  <link href="assets/img/favicon.png" rel="icon"><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet"><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"><link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li class="dropdown"><a href="#" class="active"><span>Operaciones</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="ops-dashboard.html">Tablero</a></li>
+              <li><a href="ops-arrivals-departures.html" class="active">Llegadas y salidas</a></li>
+              <li><a href="ops-rooms-status.html">Estado de habitaciones</a></li>
+              <li><a href="ops-housekeeping.html">Limpieza</a></li>
+              <li><a href="ops-maintenance.html">Mantenimiento</a></li>
+              <li><a href="ops-inventory.html">Inventario</a></li>
+              <li><a href="ops-incidents.html">Incidentes</a></li>
+              <li><a href="ops-shift-log.html">Bitácora de turnos</a></li>
+              <li><a href="ops-reports.html">Reportes</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted d-none d-sm-block" href="booking-search.html">Cambiar fechas</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title dark-background" data-aos="fade" style="background-image:url(assets/img/hotel/showcase-7.webp);">
+      <div class="container position-relative">
+        <h1>Llegadas y salidas</h1>
+        <p>Control de flujo de huéspedes (hoy).</p>
+        <nav class="breadcrumbs"><ol><li><a href="ops-dashboard.html">Operaciones</a></li><li class="current">Llegadas y salidas</li></ol></nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0">
+              <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Check-ins</h5>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" placeholder="Buscar huésped…">
+                  <button class="btn btn-success btn-sm"><i class="bi bi-search"></i></button>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table align-middle mb-0">
+                    <thead><tr><th>Hora</th><th>Reserva</th><th>Huésped</th><th>Hab.</th><th></th></tr></thead>
+                    <tbody>
+                      <tr><td>13:00</td><td>VG-24518</td><td>Alex Ruiz</td><td>—</td>
+                        <td class="text-end"><a href="booking-details.html" class="btn btn-success btn-sm">Pre-asignar</a></td></tr>
+                      <tr><td>15:00</td><td>VG-24522</td><td>Lin Chen</td><td>317</td>
+                        <td class="text-end"><button class="btn btn-success btn-sm">Check-in</button></td></tr>
+                      <tr><td>16:30</td><td>VG-24527</td><td>Familia Ríos</td><td>—</td>
+                        <td class="text-end"><a href="booking-details.html" class="btn btn-success btn-sm">Asignar</a></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0">
+              <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Check-outs</h5>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" placeholder="Buscar habitación…">
+                  <button class="btn btn-success btn-sm"><i class="bi bi-search"></i></button>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table align-middle mb-0">
+                    <thead><tr><th>Hora</th><th>Hab.</th><th>Huésped</th><th>Cargos</th><th></th></tr></thead>
+                    <tbody>
+                      <tr><td>11:00</td><td>204</td><td>María Gómez</td><td>$0</td>
+                        <td class="text-end"><button class="btn btn-success btn-sm">Cerrar folio</button></td></tr>
+                      <tr><td>11:30</td><td>221</td><td>Tomás Vargas</td><td>$36</td>
+                        <td class="text-end"><a href="booking-checkout.html" class="btn btn-success btn-sm">Cobrar</a></td></tr>
+                      <tr><td>12:00</td><td>105</td><td>Julia Soto</td><td>$0</td>
+                        <td class="text-end"><button class="btn btn-success btn-sm">Liberar y enviar a HK</button></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script><script src="assets/js/main.js"></script>
+</body>
+</html>

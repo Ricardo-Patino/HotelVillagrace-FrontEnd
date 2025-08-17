@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones – Estado de Habitaciones | Hotel Villa Grace</title>
+  <link href="assets/img/favicon.png" rel="icon"><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet"><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"><link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .room-card{min-height:110px}
+    .room-card .badge{font-weight:500}
+  </style>
+</head>
+<body>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+      <nav id="navmenu" class="navmenu">
+        <ul><li class="dropdown"><a href="#" class="active"><span>Operaciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="ops-dashboard.html">Tablero</a></li>
+            <li><a href="ops-arrivals-departures.html">Llegadas y salidas</a></li>
+            <li><a href="ops-rooms-status.html" class="active">Estado de habitaciones</a></li>
+            <li><a href="ops-housekeeping.html">Limpieza</a></li>
+            <li><a href="ops-maintenance.html">Mantenimiento</a></li>
+            <li><a href="ops-inventory.html">Inventario</a></li>
+            <li><a href="ops-incidents.html">Incidentes</a></li>
+            <li><a href="ops-shift-log.html">Bitácora de turnos</a></li>
+            <li><a href="ops-reports.html">Reportes</a></li>
+          </ul></li></ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted d-none d-sm-block" href="ops-housekeeping.html">Enviar a limpieza</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title dark-background" data-aos="fade" style="background-image:url(assets/img/hotel/showcase-7.webp);">
+      <div class="container position-relative">
+        <h1>Estado de habitaciones</h1>
+        <p>Vista rápida por piso y estado.</p>
+        <nav class="breadcrumbs"><ol><li><a href="ops-dashboard.html">Operaciones</a></li><li class="current">Habitaciones</li></ol></nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-outline-secondary btn-sm">Todas</button>
+          <button class="btn btn-outline-secondary btn-sm">Limpias</button>
+          <button class="btn btn-outline-secondary btn-sm">Sucias</button>
+          <button class="btn btn-outline-secondary btn-sm">Ocupadas</button>
+          <button class="btn btn-outline-secondary btn-sm">Fuera de servicio</button>
+        </div>
+
+        <!-- Grid por piso -->
+        <h5 class="mb-3">Piso 1</h5>
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-3">
+            <div class="border rounded-3 p-3 room-card">
+              <div class="d-flex justify-content-between">
+                <strong>101</strong><span class="badge text-bg-success">Limpia</span>
+              </div>
+              <div class="text-muted small">Disponible</div>
+              <div class="mt-2 d-flex gap-2">
+                <button class="btn btn-success btn-sm">Asignar</button>
+                <button class="btn btn-outline-secondary btn-sm">Detalle</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="border rounded-3 p-3 room-card">
+              <div class="d-flex justify-content-between">
+                <strong>105</strong><span class="badge text-bg-warning">Sucia</span>
+              </div>
+              <div class="text-muted small">Check-out 12:00</div>
+              <div class="mt-2 d-flex gap-2">
+                <a href="ops-housekeeping.html" class="btn btn-success btn-sm">Enviar HK</a>
+                <button class="btn btn-outline-secondary btn-sm">Detalle</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="border rounded-3 p-3 room-card">
+              <div class="d-flex justify-content-between">
+                <strong>108</strong><span class="badge text-bg-danger">Fuera de serv.</span>
+              </div>
+              <div class="text-muted small">Fuga baño</div>
+              <div class="mt-2 d-flex gap-2">
+                <a href="ops-maintenance.html" class="btn btn-success btn-sm">Ticket</a>
+                <button class="btn btn-outline-secondary btn-sm">Detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="mb-3">Piso 3</h5>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="border rounded-3 p-3 room-card">
+              <div class="d-flex justify-content-between">
+                <strong>317</strong><span class="badge text-bg-primary">Ocupada</span>
+              </div>
+              <div class="text-muted small">ETD 14 Oct</div>
+              <div class="mt-2 d-flex gap-2">
+                <button class="btn btn-outline-secondary btn-sm">Detalle</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="border rounded-3 p-3 room-card">
+              <div class="d-flex justify-content-between">
+                <strong>321</strong><span class="badge text-bg-success">Limpia</span>
+              </div>
+              <div class="text-muted small">Disponible</div>
+              <div class="mt-2 d-flex gap-2">
+                <button class="btn btn-success btn-sm">Asignar</button>
+                <button class="btn btn-outline-secondary btn-sm">Detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/vendor/aos/aos.js"></script><script src="assets/js/main.js"></script>
+</body>
+</html>
