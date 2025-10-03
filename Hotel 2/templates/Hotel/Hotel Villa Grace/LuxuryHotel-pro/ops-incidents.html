@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones – Incidentes | Hotel Villa Grace</title>
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/aos/aos.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/drift-zoom/drift-basic.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/css/main.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul><li class="dropdown"><a href="#" class="active"><span>Operaciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="ops-dashboard.html">Tablero</a></li><li><a href="ops-incidents.html" class="active">Incidentes</a></li>
+          <li><a href="ops-maintenance.html">Mantenimiento</a></li><li><a href="ops-reports.html">Reportes</a></li>
+        </ul></li></ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="ops-maintenance.html">Enviar a mantenimiento</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url(assets/img/hotel/showcase-7.webp);">
+    <div class="container position-relative"><h1>Incidentes</h1><p>Registro de novedades operativas.</p>
+      <nav class="breadcrumbs"><ol><li><a href="ops-dashboard.html">Operaciones</a></li><li class="current">Incidentes</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" data-aos="fade-up">
+
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white border-0"><h5 class="mb-0">Reportar incidente</h5></div>
+        <div class="card-body">
+          <form class="row g-3">
+            <div class="col-md-3"><label class="form-label">Área</label>
+              <select class="form-select"><option>Habitación</option><option>Áreas públicas</option><option>Restaurante</option><option>Recepción</option></select>
+            </div>
+            <div class="col-md-3"><label class="form-label">Ubicación</label><input class="form-control" placeholder="Ej. 312 / Lobby"></div>
+            <div class="col-md-3"><label class="form-label">Severidad</label>
+              <select class="form-select"><option>Alta</option><option>Media</option><option>Baja</option></select>
+            </div>
+            <div class="col-md-3"><label class="form-label">Reportado por</label><input class="form-control" placeholder="Nombre"></div>
+            <div class="col-12"><label class="form-label">Descripción</label><textarea class="form-control" rows="3"></textarea></div>
+            <div class="col-12 d-flex justify-content-end"><button class="btn btn-success">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Incidentes abiertos</h5>
+          <div class="d-flex gap-2">
+            <select class="form-select form-select-sm"><option>Todos</option><option>Alta</option><option>Media</option><option>Baja</option></select>
+            <input class="form-control form-control-sm" placeholder="Buscar…">
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead><tr><th>Fecha</th><th>Área</th><th>Detalle</th><th>Severidad</th><th>Estado</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>Hoy 08:35</td><td>Habitación 105</td><td>Fuga menor en lavabo</td><td><span class="badge text-bg-danger">Alta</span></td><td><span class="badge text-bg-warning">En curso</span></td>
+                  <td class="text-end"><a href="ops-maintenance.html" class="btn btn-success btn-sm">Crear ticket</a></td></tr>
+                <tr><td>Hoy 09:10</td><td>312</td><td>TV sin señal</td><td><span class="badge text-bg-warning">Media</span></td><td><span class="badge text-bg-secondary">Pendiente</span></td>
+                  <td class="text-end"><button class="btn btn-success btn-sm">Asignar</button></td></tr>
+                <tr><td>Hoy 09:40</td><td>Piso 2</td><td>Reposición amenities</td><td><span class="badge text-bg-info">Baja</span></td><td><span class="badge text-bg-success">Resuelto</span></td>
+                  <td class="text-end"><button class="btn btn-outline-secondary btn-sm">Detalle</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script><script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/aos/aos.js') }}"></script><script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Detalle de Habitación – Hotel Villa Grace, Cóbano</title>
+  <meta name="description" content="Hotel Villa Grace en Cóbano, Puntarenas. Habitación amplia con balcón, Wi-Fi, aire acondicionado/ventilador y estacionamiento. Consulta disponibilidad y reserva.">
+  <meta name="keywords" content="Hotel Villa Grace, Cóbano, Santa Teresa, hospedaje, habitaciones, Costa Rica">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/favicon.png') }}" rel="icon" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/aos/aos.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/drift-zoom/drift-basic.css') }}" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/css/main.css') }}" rel="stylesheet" />
+</head>
+
+<body class="room-details-page">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/logo.webp') }}" alt="Hotel Villa Grace"> -->
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="32" height="32" class="me-2">
+          <g id="SVGRepo_iconCarrier">
+            <g id="b">
+              <path d="M21,4H11c-1.1046,0-2,.8954-2,2V28h4v-7c0-.5523,.4477-1,1-1h4c.5523,0,1,.4477,1,1v7h4V6c0-1.1046-.8954-2-2-2Z" style="fill:#f2ebe2;"></path>
+              <path d="M30.1416,10.0103l-6.1416-.8774v-3.1329c0-1.6543-1.3457-3-3-3H11c-1.6543,0-3,1.3457-3,3v3.1329l-6.1416,.8774c-.4922,.0703-.8584,.4922-.8584,.9897V28c0,.5522,.4473,1,1,1H30c.5527,0,1-.4478,1-1V11c0-.4976-.3662-.9194-.8584-.9897ZM11,5h10c.5518,0,1,.4487,1,1V27h-2v-6c0-1.103-.8975-2-2-2h-4c-1.1025,0-2,.897-2,2v6h-2V6c0-.5513,.4482-1,1-1Zm7,22h-4v-6h4v6ZM3,11.8672l5-.7144v15.8472H3V11.8672Zm26,15.1328h-5V11.1528l5,.7144v15.1328ZM15,15.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Z" style="fill:#917a5a;"></path>
+            </g>
+          </g>
+        </svg>
+        <h1 class="sitename m-0">Hotel Villa Grace</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="rooms.html" class="active">Habitaciones</a></li>
+          <li><a href="amenities.html">Servicios</a></li>
+          <li><a href="location.html">Ubicación</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Páginas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="room-details.html">Detalle de habitación</a></li>
+              <li><a href="restaurant.html">Restaurante</a></li>
+              <li><a href="offers.html">Ofertas</a></li>
+              <li><a href="events.html">Eventos</a></li>
+              <li><a href="gallery.html">Galería</a></li>
+              <li><a href="booking.html">Reservas</a></li>
+              <li><a href="terms.html">Términos</a></li>
+              <li><a href="privacy.html">Privacidad</a></li>
+              <li><a href="404.html">404</a></li>
+              <li><a href="starter-page.html">Página base</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="booking.html">Reservar</a>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+    <!-- ======= Page Title ======= -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/hotel/showcase-7.webp)">
+      <div class="container position-relative">
+        <h1>Suite Familiar con Balcón</h1>
+        <p>Comodidad práctica en Cóbano, Puntarenas — ideal para familias o grupos pequeños.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="rooms.html">Habitaciones</a></li>
+            <li class="current">Suite Familiar con Balcón</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- ======= Room Details Section ======= -->
+    <section id="room-details" class="room-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <!-- Gallery -->
+          <div class="col-lg-7">
+            <div class="swiper room-gallery init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {"delay": 4000},
+                  "slidesPerView": 1,
+                  "spaceBetween": 10,
+                  "navigation": {"nextEl": ".swiper-button-next","prevEl": ".swiper-button-prev"},
+                  "pagination": {"el": ".swiper-pagination","clickable": true}
+                }
+              </script>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="assets\img\Hotel Villa Grace Images\485802664_1169316718225865_2347728251372611699_n.jpg" class="glightbox" data-gallery="room">
+                    <img src="assets\img\Hotel Villa Grace Images\485802664_1169316718225865_2347728251372611699_n.jpg" class="img-fluid" alt="Habitación principal con cama king">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets\img\Hotel Villa Grace Images\485802664_1169316718225865_2347728251372611699_n.jpg" class="glightbox" data-gallery="room">
+                    <img src="assets\img\Hotel Villa Grace Images\485802664_1169316718225865_2347728251372611699_n.jpg" class="img-fluid" alt="Área de estar y balcón">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets\img\Hotel Villa Grace Images\485795696_1169316654892538_211719301637860160_n.jpg" class="glightbox" data-gallery="room">
+                    <img src="assets\img\Hotel Villa Grace Images\485795696_1169316654892538_211719301637860160_n.jpg" class="img-fluid" alt="Baño con agua caliente">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets\img\Hotel Villa Grace Images\485771047_1169316508225886_5681580757183070699_n.jpg" class="glightbox" data-gallery="room">
+                    <img src="assets\img\Hotel Villa Grace Images\485771047_1169316508225886_5681580757183070699_n.jpg" class="img-fluid" alt="Vista desde el balcón">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="col-lg-5">
+            <div class="room-summary">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge bg-success">Disponible</span>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+
+              <h2 class="mb-3">Suite Familiar con Balcón</h2>
+              <p class="mb-3">
+                Habitación cómoda y luminosa en el corazón de Cóbano, ideal para familias o grupos pequeños. Cuenta con
+                balcón, Wi-Fi, baño privado con agua caliente y opciones de aire acondicionado o ventilador
+                <em>(según disponibilidad)</em>.
+              </p>
+
+              <ul class="list-unstyled mb-3">
+                <li class="mb-2"><i class="bi bi-people me-2"></i>Capacidad: 2–4 huéspedes</li>
+                <li class="mb-2"><i class="bi bi-rulers me-2"></i>Superficie aprox.: 24–30 m²</li>
+                <li class="mb-2"><i class="bi bi-moon-stars me-2"></i>Camas: 1 King + 2 individuales <em>(configurable)</em></li>
+                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Cóbano, Puntarenas, Costa Rica</li>
+              </ul>
+
+              <div class="price-box d-flex align-items-center gap-2 mb-3">
+                <span class="h3 m-0">Desde ₡15,000 por persona</span>
+                <span>/ noche</span>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="booking.html" class="btn btn-primary btn-lg">
+                  <i class="bi bi-calendar-check me-2"></i>Consultar disponibilidad
+                </a>
+                <!-- Reemplaza con tu número real si usas WhatsApp -->
+                <a href="https://wa.me/50600000000?text=Hola%20Hotel%20Villa%20Grace,%20quiero%20informaci%C3%B3n%20de%20la%20Suite%20Familiar%20con%20Balc%C3%B3n" class="btn btn-outline-primary">
+                  <i class="bi bi-whatsapp me-2"></i>Reservar por WhatsApp
+                </a>
+              </div>
+
+              <hr class="my-4" />
+
+              <h5>Servicios incluidos</h5>
+              <div class="row g-2 mb-2">
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-wifi me-2"></i>Wi-Fi gratis</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-thermometer-sun me-2"></i>A/C o ventilador</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-cup-hot me-2"></i>Hervidor / café</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-water me-2"></i>Agua caliente</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-tv me-2"></i>TV</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-car-front me-2"></i>Parqueo</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-tree me-2"></i>Balcón/terraza</span>
+                </div>
+                <div class="col-6">
+                  <span class="d-flex align-items-center"><i class="bi bi-door-closed me-2"></i>Entrada privada</span>
+                </div>
+              </div>
+
+              <small class="text-muted">* Algunos servicios pueden variar por habitación. Confirma al reservar.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="row mt-5 gy-4">
+          <div class="col-lg-7">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h4 class="mb-3">Descripción</h4>
+                <p>
+                  La Suite Familiar con Balcón del Hotel Villa Grace ofrece un ambiente sencillo y acogedor, perfecto
+                  para descansar después de explorar las playas de la Península de Nicoya (Santa Teresa, Montezuma y Mal
+                  País quedan a corta distancia en vehículo).
+                </p>
+                <ul class="mb-0">
+                  <li>Espacio ventilado con luz natural y salida a balcón.</li>
+                  <li>Baño privado con ducha y agua caliente.</li>
+                  <li>Zona con hervidor y menaje básico para bebidas.</li>
+                  <li>Wi-Fi de cortesía y estacionamiento en la propiedad.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+              <div class="card-body">
+                <h4 class="mb-3">Políticas &amp; información</h4>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <p class="mb-1"><i class="bi bi-clock me-2"></i><strong>Check-in:</strong> 15:00</p>
+                    <p class="mb-1"><i class="bi bi-clock-history me-2"></i><strong>Check-out:</strong> 11:00</p>
+                    <p class="mb-1"><i class="bi bi-ban me-2"></i><strong>No fumar</strong> dentro de las habitaciones</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="mb-1"><i class="bi bi-shield-check me-2"></i><strong>Cancelación:</strong> flexible 48 h *</p>
+                    <p class="mb-1"><i class="bi bi-cash-coin me-2"></i><strong>Pago:</strong> efectivo / transferencia</p>
+                    <p class="mb-1"><i class="bi bi-emoji-smile me-2"></i><strong>Niños:</strong> bienvenidos</p>
+                  </div>
+                </div>
+                <small class="text-muted">* Las políticas pueden cambiar según temporada y tarifa. Verifica al reservar.</small>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+              <div class="card-body">
+                <h4 class="mb-3">Preguntas frecuentes</h4>
+                <div class="accordion" id="faq">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="q1">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                        ¿Incluye aire acondicionado?
+                      </button>
+                    </h2>
+                    <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        Contamos con <strong>A/C o ventilador</strong> según la unidad y disponibilidad. Indícanos tu preferencia al reservar.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="q2">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                        ¿Aceptan mascotas?
+                      </button>
+                    </h2>
+                    <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        Podemos evaluar casos puntuales para mascotas pequeñas. Escríbenos por WhatsApp antes de reservar.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="q3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                        ¿El estacionamiento es gratuito?
+                      </button>
+                    </h2>
+                    <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        Sí, el <strong>parqueo</strong> en la propiedad está incluido sin costo adicional, sujeto a disponibilidad.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar / Booking widget -->
+          <div class="col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h4 class="mb-3">Ver disponibilidad</h4>
+                <form action="booking.html" method="get" class="row g-3">
+                  <div class="col-12">
+                    <label for="checkin" class="form-label">Check-in</label>
+                    <input type="date" id="checkin" name="checkin" class="form-control" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="checkout" class="form-label">Check-out</label>
+                    <input type="date" id="checkout" name="checkout" class="form-control" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="guests" class="form-label">Huéspedes</label>
+                    <select id="guests" name="guests" class="form-select" required>
+                      <option value="1">1</option>
+                      <option value="2" selected>2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="rooms" class="form-label">Habitaciones</label>
+                    <select id="rooms" name="rooms" class="form-select" required>
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">
+                      <i class="bi bi-search me-2"></i>Buscar
+                    </button>
+                  </div>
+                </form>
+                <div class="d-flex align-items-center gap-2 mt-3 small text-muted">
+                  <i class="bi bi-shield-lock"></i><span>Reserva segura · Confirmación inmediata</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+              <div class="card-body">
+                <h5 class="mb-3">También te puede interesar</h5>
+                <ul class="list-unstyled m-0">
+                  <li class="d-flex align-items-center mb-3">
+                    <img src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/hotel/room-3.webp') }}" class="rounded me-3" width="72" height="72" alt="Doble Jardín">
+                    <div>
+                      <a href="room-details.html" class="fw-semibold d-block">Doble Vista Jardín</a>
+                      <small class="text-muted">Desde ₡15,000 por persona / noche</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <img src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/hotel/room-5.webp') }}" class="rounded me-3" width="72" height="72" alt="Familiar Conectada">
+                    <div>
+                      <a href="room-details.html" class="fw-semibold d-block">Familiar Conectada</a>
+                      <small class="text-muted">Desde ₡15,000 por persona / noche</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/img/hotel/room-9.webp') }}" class="rounded me-3" width="72" height="72" alt="Estándar King">
+                    <div>
+                      <a href="room-details.html" class="fw-semibold d-block">Estándar King</a>
+                      <small class="text-muted">Desde ₡15,000 por persona / noche</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Similar Rooms -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="section-title" data-aos="fade-up">
+              <h3>Habitaciones similares</h3>
+              <p>Explora otras opciones que podrían ajustarse a tu viaje.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="room-card">
+              <div class="room-image">
+                <img src="assets\img\Hotel Villa Grace Images\485759165_1169316558225881_207852475817598576_n.jpg" alt="Suite Vista Montaña" class="img-fluid">
+                <div class="room-price"><span class="price">₡15,000 por persona</span><span class="period">/ noche</span></div>
+              </div>
+              <div class="room-content">
+                <h4>Suite Vista Montaña</h4>
+                <p>Ideal para 2–3 huéspedes con balcón privado y Wi-Fi.</p>
+                <div class="room-actions">
+                  <a href="room-details.html" class="btn btn-primary">Ver detalles</a>
+                  <a href="booking.html" class="btn btn-outline-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="room-card">
+              <div class="room-image">
+                <img src="assets\img\Hotel Villa Grace Images\485757412_1169316591559211_2641667825645153970_n.jpg" alt="Doble Estándar" class="img-fluid">
+                <div class="room-price"><span class="price">₡15,000 por persona</span><span class="period">/ noche</span></div>
+              </div>
+              <div class="room-content">
+                <h4>Doble Estándar</h4>
+                <p>Con cama queen, baño privado y estacionamiento.</p>
+                <div class="room-actions">
+                  <a href="room-details.html" class="btn btn-primary">Ver detalles</a>
+                  <a href="booking.html" class="btn btn-outline-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="room-card">
+              <div class="room-image">
+                <img src="assets\img\Hotel Villa Grace Images\485734983_1169316648225872_6932669572785789704_n.jpg" alt="Suite Terraza" class="img-fluid">
+                <div class="room-price"><span class="price">₡15,000 por persona</span><span class="period">/ noche</span></div>
+              </div>
+              <div class="room-content">
+                <h4>Suite Terraza</h4>
+                <p>Con terraza amplia, A/C/ventilador y Wi-Fi de cortesía.</p>
+                <div class="room-actions">
+                  <a href="room-details.html" class="btn btn-primary">Ver detalles</a>
+                  <a href="booking.html" class="btn btn-outline-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Room Details Section -->
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Hotel Villa Grace</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Cóbano, 100 m del Banco Nacional</p>
+              <p>Puntarenas, Costa Rica · 60111</p>
+              <p class="mt-3"><strong>Teléfono:</strong> <a href="Tel: +50626420225">2642-0225</a></p>
+              <p><strong>Email:</strong> <span><a href="mailto:hotelvillagrace@gmail.com">hotelvillagrace@gmail.com</a></span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="rooms.html">Habitaciones</a></li>
+              <li><a href="terms.html">Términos</a></li>
+              <li><a href="privacy.html">Privacidad</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="amenities.html">Wi-Fi</a></li>
+              <li><a href="amenities.html">Estacionamiento</a></li>
+              <li><a href="amenities.html">Atención turística</a></li>
+              <li><a href="amenities.html">Traslados (bajo costo)</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Síguenos</h4>
+            <div class="social-links d-flex">
+              <a href="https://www.facebook.com/HotelVillaGrace" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <p class="small mt-3">Imágenes referenciales. Amenidades sujetas a disponibilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>© <strong><span>Hotel Villa Grace</span></strong>. Todos los derechos reservados</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/drift-zoom/Drift.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='Hotel/Hotel Villa Grace/LuxuryHotel-pro/assets/js/main.js') }}"></script>
+</body>
+</html>
+<script>
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+  // Initialize Swiper for room gallery
+  const swiper = new Swiper('.room-gallery', JSON.parse(document.querySelector('.swiper-config').textContent));
+
+  // Initialize GLightbox for image lightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
