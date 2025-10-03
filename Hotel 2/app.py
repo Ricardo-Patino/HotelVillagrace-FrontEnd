@@ -1,12 +1,104 @@
-from flask import Flask, render_template, url_for
+# app.py
+# Aplicación principal Flask para Hotel_VillaGrace.
+# Portátil (sin rutas absolutas) y ejecutable directamente con "Run/F5" en VS Code
+# o con:  python app.py
+
+import os
+import sys
 from pathlib import Path
 
-app = Flask(__name__)
+# -----------------------------------------------------------------------------
+# Bootstrap de portabilidad y verificación de dependencias
+# -----------------------------------------------------------------------------
+BASE_DIR = Path(__file__).resolve().parent
 
+# Asegura que podamos importar módulos locales (config.py, extensions.py, models/)
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+# Carga variables de entorno desde .env si está disponible
+try:
+    from dotenv import load_dotenv  # type: ignore
+    load_dotenv(BASE_DIR / ".env")
+except Exception:
+    # No es obligatorio tener python-dotenv instalado para ejecutar si ya tienes
+    # las variables en el entorno del sistema. Ignoramos si falta.
+    pass
+
+# Verifica dependencias críticas y da un mensaje claro si faltan
+def _import_or_exit():
+    try:
+        from flask import Flask  # noqa: F401
+        import flask_sqlalchemy  # noqa: F401
+        import flask_migrate  # noqa: F401
+        import pymysql  # noqa: F401
+        # Para auth caching_sha2_password, cryptography debe estar presente
+        import cryptography  # noqa: F401
+    except ModuleNotFoundError as e:
+        missing = str(e).split("'")[1]
+        msg = (
+            f"\n[ERROR] Falta el paquete requerido: {missing}\n"
+            "Instálalo en el intérprete que estés usando para ejecutar app.py.\n\n"
+            "Ejemplos:\n"
+            "  # Si usas el venv del proyecto\n"
+            f"  {sys.executable} -m pip install Flask Flask-SQLAlchemy Flask-Migrate PyMySQL python-dotenv cryptography\n\n"
+            "  # O con requirements.txt\n"
+            f"  {sys.executable} -m pip install -r \"{(BASE_DIR / 'requirements.txt').as_posix()}\"\n"
+        )
+        print(msg, file=sys.stderr)
+        sys.exit(1)
+
+_import_or_exit()
+
+# Ahora sí, imports reales
+from flask import Flask, render_template, jsonify, send_from_directory, url_for  # noqa: E402
+from sqlalchemy import text  # noqa: E402
+from config import Config  # noqa: E402
+from extensions import db, migrate  # noqa: E402
+# from models import Room  # (opcional) para que Migrate detecte modelos
+
+# -----------------------------------------------------------------------------
+# Configuración de la app (portabilidad de templates/static)
+# -----------------------------------------------------------------------------
+app = Flask(
+    __name__,
+    template_folder=str(BASE_DIR / "templates"),
+    static_folder=str(BASE_DIR / "static"),
+)
+
+# Cargar configuración (incluye SQLALCHEMY_DATABASE_URI)
+app.config.from_object(Config)
+
+# Inicializar extensiones
+db.init_app(app)
+migrate.init_app(app, db)
+
+# -----------------------------------------------------------------------------
+# Endpoint de verificación de base de datos
+# -----------------------------------------------------------------------------
+@app.get("/db-ping")
+def db_ping():
+    """
+    Verifica conectividad a la base de datos ejecutando SELECT 1.
+    Responde 200 si hay conexión, 500 si hay error.
+    """
+    try:
+        result = db.session.execute(text("SELECT 1")).scalar()
+        ok = (result == 1)
+        return jsonify({"database": "ok" if ok else "unknown"}), 200 if ok else 500
+    except Exception as e:
+        return jsonify({"database": "error", "detail": str(e)}), 500
+
+# -----------------------------------------------------------------------------
+# Manejadores de error
+# -----------------------------------------------------------------------------
 @app.errorhandler(404)
 def not_found(e):
     return render_template("Hotel/Hotel Villa Grace/LuxuryHotel-pro/404.html"), 404
 
+# -----------------------------------------------------------------------------
+# Rutas existentes (NO modificadas)
+# -----------------------------------------------------------------------------
 @app.route("/about.html")
 def about_html():
     return render_template("Hotel/Hotel Villa Grace/LuxuryHotel-pro/about.html")
@@ -235,20 +327,21 @@ def starter_page_html():
 def terms_html():
     return render_template("Hotel/Hotel Villa Grace/LuxuryHotel-pro/terms.html")
 
-
-if __name__ == "__main__":
-     # Debug server for local development
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
-import os
-from flask import send_from_directory
-
-# Ruta física donde están tus assets dentro de static/
+# -----------------------------------------------------------------------------
+# Ruta física de assets (si la utilizas en algún endpoint)
+# -----------------------------------------------------------------------------
 ASSETS_ROOT = os.path.join(
     app.static_folder,
     'Hotel', 'Hotel Villa Grace', 'LuxuryHotel-pro', 'assets'
 )
+# Si necesitas exponer assets por una ruta, descomenta este ejemplo:
+# @app.route("/assets/<path:filename>")
+# def assets(filename):
+#     return send_from_directory(ASSETS_ROOT, filename)
 
-
-
-
+# -----------------------------------------------------------------------------
+# Entry point
+# -----------------------------------------------------------------------------
+if __name__ == "__main__":
+    # Debug server para desarrollo local
+    app.run(host="0.0.0.0", port=5000, debug=True)
