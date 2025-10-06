@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ubicación - Hotel Villa Grace, Cóbano</title>
+  <meta name="description"
+    content="Cómo llegar al Hotel Villa Grace en Cóbano, Puntarenas. Mapa, indicaciones desde el ferry de Paquera y el Aeropuerto de Tambor, y lugares cercanos como Santa Teresa y Montezuma.">
+  <meta name="keywords"
+    content="Hotel Villa Grace, Cóbano, Puntarenas, Santa Teresa, Montezuma, Paquera, Tambor, ubicación, cómo llegar">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/drift-zoom/drift-basic.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+</head>
+
+<body class="location-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="{{ url_for('static', filename='assets/img/logo.webp') }}" alt="Hotel Villa Grace"> -->
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="32" height="32" class="me-2">
+          <g id="SVGRepo_iconCarrier">
+            <g id="b">
+              <path
+                d="M21,4H11c-1.1046,0-2,.8954-2,2V28h4v-7c0-.5523,.4477-1,1-1h4c.5523,0,1,.4477,1,1v7h4V6c0-1.1046-.8954-2-2-2Z"
+                style="fill:#f2ebe2;"></path>
+              <path
+                d="M30.1416,10.0103l-6.1416-.8774v-3.1329c0-1.6543-1.3457-3-3-3H11c-1.6543,0-3,1.3457-3,3v3.1329l-6.1416,.8774c-.4922,.0703-.8584,.4922-.8584,.9897V28c0,.5522,.4473,1,1,1H30c.5527,0,1-.4478,1-1V11c0-.4976-.3662-.9194-.8584-.9897ZM11,5h10c.5518,0,1,.4487,1,1V27h-2v-6c0-1.103-.8975-2-2-2h-4c-1.1025,0-2,.897-2,2v6h-2V6c0-.5513,.4482-1,1-1Zm7,22h-4v-6h4v6ZM3,11.8672l5-.7144v15.8472H3V11.8672Zm26,15.1328h-5V11.1528l5,.7144v15.1328ZM15,15.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Z"
+                style="fill:#917a5a;"></path>
+            </g>
+          </g>
+        </svg>
+        <h1 class="sitename m-0">Hotel Villa Grace</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="rooms.html">Habitaciones</a></li>
+          <li><a href="amenities.html">Servicios</a></li>
+          <li><a href="location.html" class="active">Ubicación</a></li>
+          <li class="dropdown"><a href="#"><span>Páginas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="room-details.html">Detalle de habitación</a></li>
+              <li><a href="restaurant.html">Restaurante</a></li>
+              <li><a href="offers.html">Ofertas</a></li>
+              <li><a href="events.html">Eventos</a></li>
+              <li><a href="gallery.html">Galería</a></li>
+              <li><a href="booking.html">Reservas</a></li>
+              <li><a href="terms.html">Términos</a></li>
+              <li><a href="privacy.html">Privacidad</a></li>
+              <li><a href="404.html">404</a></li>
+              <li><a href="starter-page.html">Página base</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="booking.html">Reservar</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade"
+      style="background-image: url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+      <div class="container position-relative">
+        <h1>Ubicación</h1>
+        <p>En el corazón de Cóbano, Puntarenas — a minutos de Santa Teresa, Mal País y Montezuma.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Ubicación</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Hotel Location Section -->
+    <section id="hotel-location" class="hotel-location section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <!-- Map Section -->
+          <div class="col-lg-8 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+            <div class="map-wrapper" style="height: 100%">
+              <iframe style="height: 100%; width: 100%;"
+                src="https://www.google.com/maps?q=Hotel%20Villa%20Grace%2C%20C%C3%B3bano%2C%20Costa%20Rica&output=embed"
+                frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="location-pin">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Hotel Villa Grace</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Info -->
+          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
+            <div class="location-info">
+              <h3>Centro de Cóbano, Puntarenas.</h3>
+              <p class="location-description">Punto estratégico para recorrer la Península de Nicoya. Desde aquí podrás
+                llegar fácilmente a las playas y cascadas más populares de la zona.</p>
+
+              <div class="address-block">
+                <h5><i class="bi bi-geo-alt"></i> Dirección</h5>
+                <p>Cóbano, Puntarenas, Costa Rica<br><small>125 metros Este del Banco Nacional de Cóbano, Puntarenas.
+                    60111 Cóbano, Costa Rica.</small></p>
+              </div>
+
+              <div class="transport-info">
+                <h5><i class="bi bi-airplane"></i> Distancias aproximadas</h5>
+                <p>Aeropuerto de Tambor (TMU): 30–40 min en auto.</p>
+                <p>Ferry Paquera: 60–80 min en auto.</p>
+                <p>Santa Teresa / Mal País: 25–35 min en auto.</p>
+                <p>Montezuma: 15–25 min en auto.</p>
+              </div>
+
+              <div class="contact-info">
+                <h5><i class="bi bi-telephone"></i> Contacto</h5>
+                <p><a href="Tel: +50626420225">2642-0225</a></p>
+                <p><a href="mailto:hotelvillagrace@gmail.com">hotelvillagrace@gmail.com</a></p>
+              </div>
+
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Hotel%20Villa%20Grace%2C%20C%C3%B3bano%2C%20Costa%20Rica"
+                target="_blank" class="btn btn-primary">Cómo llegar</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Nearby Attractions -->
+        <div class="row nearby-attractions" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-12">
+            <h3 class="attractions-title">Qué hay cerca</h3>
+            <p class="attractions-subtitle">Playas, cascadas y reservas naturales a corta distancia.</p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="attraction-card">
+              <div class="attraction-image">
+                <img src="{{ url_for('static', filename='assets/img/Hotel Villa Grace Images/Catarata Montezuma.png') }}" alt="Cascadas de Montezuma"
+                  class="img-fluid">
+              </div>
+              <div class="attraction-content">
+                <h5>Cascadas de Montezuma</h5>
+                <p class="distance"><i class="bi bi-geo-alt"></i> ~20 min en auto</p>
+                <p>Sendero popular hacia un conjunto de caídas de agua con pozas para bañarse.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="attraction-card">
+              <div class="attraction-image">
+                <img src="{{ url_for('static', filename='assets/img/Hotel Villa Grace Images/SantaTere.jpg') }}" alt="Playa Santa Teresa" class="img-fluid">
+              </div>
+              <div class="attraction-content">
+                <h5>Playa Santa Teresa</h5>
+                <p class="distance"><i class="bi bi-geo-alt"></i> ~30 min en auto</p>
+                <p>Famosa por su oleaje para surf, atardeceres espectaculares y ambiente relajado.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="700">
+            <div class="attraction-card">
+              <div class="attraction-image">
+                <img src="{{ url_for('static', filename='assets/img/Hotel Villa Grace Images/CaboBlanco.jpg') }}" alt="Reserva Cabo Blanco"
+                  class="img-fluid">
+              </div>
+              <div class="attraction-content">
+                <h5>Reserva Natural Cabo Blanco</h5>
+                <p class="distance"><i class="bi bi-geo-alt"></i> ~35–45 min en auto</p>
+                <p>Área protegida con senderos y abundante fauna: ideal para caminatas matutinas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="800">
+            <div class="attraction-card">
+              <div class="attraction-image">
+                <img src="{{ url_for('static', filename='assets/img/Hotel Villa Grace Images/PlayaMontezuma.jpg') }}" alt="Playa Montezuma"
+                  class="img-fluid">
+              </div>
+              <div class="attraction-content">
+                <h5>Playa Montezuma</h5>
+                <p class="distance"><i class="bi bi-geo-alt"></i> ~20–25 min en auto</p>
+                <p>Pueblo bohemio frente al mar, perfecto para pasear y comer frente a la playa.</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End Nearby Attractions -->
+
+        <!-- Transportation Options -->
+        <div class="row transportation-section" data-aos="fade-up" data-aos-delay="900">
+          <div class="col-12">
+            <h3 class="transport-title">Cómo llegar</h3>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="transport-option">
+              <div class="transport-icon">
+                <i class="bi bi-car-front"></i>
+              </div>
+              <h5>En automóvil</h5>
+              <p>Desde San José, toma la Ruta 27 hasta Puntarenas, cruza en ferry a Paquera y continúa por Ruta 21/160
+                hacia Cóbano.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="transport-option">
+              <div class="transport-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-boat"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a.5.5 0 0 1 .5.5V2h1a.5.5 0 0 1 .5.5v1.086l2.707 2.707a.5.5 0 0 1-.707.707L9.5 4.707V6h-3V4.707L4.707 7.5a.5.5 0 0 1-.707-.707L6.5 3.586V2.5a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 8 0z" />
+                  <path
+                    d="M2.5 8a.5.5 0 0 1 .5.5v.5h10v-.5a.5.5 0 0 1 1 0v.5a1.5 1.5 0 0 1-1.5 1.5H3.5A1.5 1.5 0 0 1 2 9v-.5a.5.5 0 0 1 .5-.5z" />
+                </svg>
+              </div>
+
+              <h5>Ferry Paquera</h5>
+              <p>El ferry conecta Puntarenas–Paquera varias veces al día. Recomendable comprar boletos con antelación en
+                temporada alta.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="transport-option">
+              <div class="transport-icon">
+                <i class="bi bi-bus-front"></i>
+              </div>
+              <h5>En autobús</h5>
+              <p>Servicios diarios desde San José a Cóbano/Santa Teresa/Montezuma. Consulta horarios actualizados antes
+                de viajar.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1300">
+            <div class="transport-option">
+              <div class="transport-icon">
+                <i class="bi bi-airplane"></i>
+              </div>
+              <h5>Vía aérea</h5>
+              <p>Vuelos a Tambor (TMU) desde San José. Desde allí, traslado por carretera a Cóbano (~30–40 min).</p>
+            </div>
+          </div>
+
+        </div><!-- End Transportation Section -->
+
+      </div>
+
+    </section><!-- /Hotel Location Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Hotel Villa Grace</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Cóbano, 100 m del Banco Nacional</p>
+              <p>Puntarenas, Costa Rica · 60111</p>
+              <p class="mt-3"><strong>Teléfono:</strong> <a href="Tel: +50626420225">2642-0225</a></p>
+              <p><strong>Email:</strong> <span><a href="mailto:hotelvillagrace@gmail.com">hotelvillagrace@gmail.com</a></span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="rooms.html">Habitaciones</a></li>
+              <li><a href="terms.html">Términos</a></li>
+              <li><a href="privacy.html">Privacidad</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="amenities.html">Wi‑Fi</a></li>
+              <li><a href="amenities.html">Parqueo</a></li>
+              <li><a href="amenities.html">Atención turística</a></li>
+              <li><a href="amenities.html">Traslados (con costo)</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Síguenos</h4>
+            <div class="social-links d-flex">
+              <a href="https://www.facebook.com/HotelVillaGrace" target="_blank" rel="noopener"><i
+                  class="bi bi-facebook"></i></a>
+                <a href="https://wa.me/50689488202"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <p class="small mt-3">Los tiempos y distancias son referenciales y pueden variar según el tráfico y el
+              estado de la vía.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © <strong><span>Hotel Villa Grace</span></strong>. Todos los derechos reservados
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/drift-zoom/Drift.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar reserva | Hotel Villa Grace</title>
+  <meta name="description" content="Datos del huésped, políticas y pago seguro.">
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body class="privacy-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="booking-results.html">Disponibilidad</a></li>
+        <li><a href="booking-details.html">Detalle</a></li>
+        <li><a href="booking-checkout.html" class="active">Finalizar</a></li>
+      </ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="portal-dashboard.html">Portal Huésped</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+    <div class="container position-relative">
+      <h1>Finalizar reserva</h1>
+      <p>Suite Junior Vista Mar · 12–15 Oct (3 noches)</p>
+      <nav class="breadcrumbs"><ol><li><a href="booking-results.html">Disponibilidad</a></li><li><a href="booking-details.html">Detalle</a></li><li class="current">Finalizar</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section pt-3">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0 mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Datos del huésped</h5>
+              <form class="row g-3">
+                <div class="col-md-6"><label class="form-label">Nombre</label><input class="form-control" required></div>
+                <div class="col-md-6"><label class="form-label">Apellidos</label><input class="form-control" required></div>
+                <div class="col-md-6"><label class="form-label">Correo</label><input type="email" class="form-control" required></div>
+                <div class="col-md-6"><label class="form-label">Teléfono</label><input class="form-control"></div>
+                <div class="col-12"><label class="form-label">Observaciones</label><textarea class="form-control" rows="3" placeholder="Ej. llegada tarde, alergias..."></textarea></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Pago</h5>
+              <form class="row g-3">
+                <div class="col-12"><label class="form-label">Tarjeta</label><input class="form-control" placeholder="**** **** **** 4242"></div>
+                <div class="col-md-6"><label class="form-label">Vencimiento</label><input class="form-control" placeholder="MM/AA"></div>
+                <div class="col-md-6"><label class="form-label">CVC</label><input class="form-control" placeholder="***"></div>
+                <div class="col-12 form-check"><input class="form-check-input" type="checkbox" id="pol" required><label class="form-check-label" for="pol">Acepto las <a href="terms.html" target="_blank">políticas y términos</a>.</label></div>
+              </form>
+              <div class="d-grid mt-3">
+                <a class="btn btn-primary" href="booking-confirmation.html"><i class="bi bi-shield-check me-1"></i>Confirmar y pagar</a>
+              </div>
+              <small class="text-muted d-block mt-2"><i class="bi bi-lock me-1"></i>Pago seguro cifrado (PCI-DSS).</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Resumen</h5>
+              <div class="d-flex justify-content-between"><span>Tarifa (3 x $299)</span><span>$897.00</span></div>
+              <div class="d-flex justify-content-between"><span>Impuestos</span><span>$53.82</span></div>
+              <div class="d-flex justify-content-between"><span>Cargos</span><span>$0.00</span></div>
+              <hr><div class="d-flex justify-content-between fw-semibold"><span>Total</span><span>$950.82</span></div>
+              <a class="btn btn-outline btn-sm mt-3" href="booking-details.html">Cambiar plan</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script><script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script><script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

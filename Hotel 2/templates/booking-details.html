@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de habitación | Hotel Villa Grace</title>
+  <meta name="description" content="Comodidades, fotos y selección de tarifa.">
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body class="privacy-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="booking-search.html">Buscar</a></li>
+        <li><a href="booking-results.html">Disponibilidad</a></li>
+        <li><a href="booking-details.html" class="active">Detalle</a></li>
+      </ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="booking-checkout.html">Continuar</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+    <div class="container position-relative">
+      <h1>Suite Junior Vista Mar</h1>
+      <p>36 m² · Cama King · Balcón con vista</p>
+      <nav class="breadcrumbs"><ol><li><a href="booking-results.html">Disponibilidad</a></li><li class="current">Detalle</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section pt-3">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0 mb-3">
+            <img src="{{ url_for('static', filename='assets/img/rooms/room-3.webp') }}" class="card-img-top" alt="">
+            <div class="card-body">
+              <p>Amplia suite con balcón y vista al Pacífico. Wi-Fi de alta velocidad, aire acondicionado, minibar y ducha tipo lluvia.</p>
+              <ul class="small text-muted list-unstyled mb-0">
+                <li><i class="bi bi-wifi me-1"></i>Wi-Fi gratis</li>
+                <li><i class="bi bi-cup-hot me-1"></i>Desayuno incluido</li>
+                <li><i class="bi bi-snow me-1"></i>A/C</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Elige tu plan</h5>
+
+              <div class="border rounded p-3 mb-2">
+                <div class="d-flex justify-content-between"><strong>Tarifa Flexible</strong><strong>$299/noche</strong></div>
+                <small class="text-muted">Cancela gratis hasta 48 h antes.</small>
+                <a class="btn btn-outline btn-sm mt-2" href="booking-checkout.html">Reservar</a>
+              </div>
+
+              <div class="border rounded p-3">
+                <div class="d-flex justify-content-between"><strong>No Reembolsable</strong><strong>$259/noche</strong></div>
+                <small class="text-muted">Pago inmediato. Sin cambios.</small>
+                <a class="btn btn-primary btn-sm mt-2" href="booking-checkout.html">Reservar</a>
+              </div>
+
+              <p class="text-muted small mt-2">Impuestos y cargos aplican al finalizar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-end mt-3">
+        <a class="btn btn-outline" href="booking-results.html">Volver</a>
+        <a class="btn btn-primary" href="booking-checkout.html">Continuar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script><script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script><script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

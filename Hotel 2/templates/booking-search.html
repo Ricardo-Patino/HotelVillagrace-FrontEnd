@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Reservas – Buscar | Hotel Villa Grace</title>
+  <meta name="description" content="Busca disponibilidad y tarifas en Hotel Villa Grace.">
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendors -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/drift-zoom/drift-basic.css') }}" rel="stylesheet">
+
+  <!-- Estilos del proyecto -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body class="privacy-page">
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Hotel Villa Grace</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="rooms.html">Habitaciones</a></li>
+          <li><a href="booking-search.html" class="active">Reservar</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted d-none d-sm-block" href="portal-dashboard.html">Portal Huésped</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Título -->
+    <div class="page-title dark-background" data-aos="fade"
+         style="background-image:url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+      <div class="container position-relative">
+        <h1>Reserva tu estadía</h1>
+        <p>Elige fechas y huéspedes para ver disponibilidad y tarifas.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Reservas</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Buscador -->
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <form class="row g-3 align-items-end" action="booking-results.html" method="get">
+              <div class="col-12 col-md-3">
+                <label class="form-label">Check-in</label>
+                <input type="date" class="form-control" name="checkin" required>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="form-label">Check-out</label>
+                <input type="date" class="form-control" name="checkout" required>
+              </div>
+              <div class="col-6 col-md-2">
+                <label class="form-label">Adultos</label>
+                <select class="form-select" name="adults">
+                  <option>1</option><option selected>2</option><option>3</option><option>4</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2">
+                <label class="form-label">Niños</label>
+                <select class="form-select" name="children">
+                  <option selected>0</option><option>1</option><option>2</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-2 d-grid">
+                <!-- Forzamos el verde del sistema -->
+                <button class="btn btn-success">
+                  <i class="bi bi-search me-1"></i> Buscar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <p class="text-muted small mt-3">
+          <i class="bi bi-info-circle me-1"></i> Mejor tarifa garantizada al reservar directo.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="copyright text-center">
+      <div class="container">© <strong><span>Hotel Villa Grace</span></strong> · Cóbano, Puntarenas</div>
+    </div>
+  </footer>
+
+  <!-- Utilidades -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/drift-zoom/Drift.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

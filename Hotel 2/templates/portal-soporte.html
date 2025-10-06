@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte al huésped | Hotel Villa Grace</title>
+  <meta name="description" content="Abre tickets, chatea con recepción y consulta respuestas.">
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body class="privacy-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="portal-dashboard.html">Portal</a></li>
+        <li><a href="portal-soporte.html" class="active">Soporte</a></li>
+      </ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="portal-reservas.html">Mis reservas</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+    <div class="container position-relative">
+      <h1>Soporte al huésped</h1>
+      <p>¿Necesitas ayuda? Estamos para asistirte 24/7.</p>
+      <nav class="breadcrumbs"><ol><li><a href="portal-dashboard.html">Portal</a></li><li class="current">Soporte</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section pt-3">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Abrir ticket</h5>
+              <form class="row g-3">
+                <div class="col-12"><label class="form-label">Asunto</label><input class="form-control" placeholder="Ej. Solicitud de late check-out"></div>
+                <div class="col-12"><label class="form-label">Reserva relacionada</label>
+                  <select class="form-select"><option>#VG-2025-104</option><option>Sin reserva</option></select>
+                </div>
+                <div class="col-12"><label class="form-label">Mensaje</label><textarea class="form-control" rows="5"></textarea></div>
+                <div class="col-12 d-grid d-md-flex gap-2"><button class="btn btn-primary">Enviar</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Mis solicitudes</h5>
+              <div class="list-group">
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  <span><i class="bi bi-chat-left-text me-2"></i>Late check-out</span><span class="badge bg-warning text-dark">En proceso</span>
+                </a>
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  <span><i class="bi bi-chat-left-text me-2"></i>Almohadas extra</span><span class="badge bg-success">Resuelto</span>
+                </a>
+              </div>
+              <p class="text-muted small mt-3"><i class="bi bi-info-circle me-1"></i>Para soporte urgente durante tu estadía, marca recepción desde la habitación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong>. Todos los derechos reservados</div></div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

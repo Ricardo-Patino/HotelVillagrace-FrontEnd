@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Finanzas – Facturas | Hotel Villa Grace</title>
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon"><link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/vendor/drift-zoom/drift-basic.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">Hotel Villa Grace</h1></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li class="dropdown"><a href="#" class="active"><span>Finanzas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="fin-dashboard.html">Tablero</a></li>
+            <li><a href="fin-payments.html">Cobros y folios</a></li>
+            <li><a href="fin-invoices.html" class="active">Facturas</a></li>
+            <li><a href="fin-close.html">Cierre de caja</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted d-none d-sm-block" href="#" onclick="window.print()">Imprimir</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title dark-background" data-aos="fade" style="background-image:url({{ url_for('static', filename='assets/img/hotel/showcase-7.webp') }});">
+    <div class="container position-relative">
+      <h1>Facturas</h1>
+      <p>Emisión y historial de comprobantes.</p>
+      <nav class="breadcrumbs"><ol><li><a href="fin-dashboard.html">Finanzas</a></li><li class="current">Facturas</li></ol></nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0"><h5 class="mb-0">Emitir factura</h5></div>
+            <div class="card-body">
+              <form class="row g-3">
+                <div class="col-12"><label class="form-label">Folio</label><input class="form-control" placeholder="Ej. F-98215"></div>
+                <div class="col-12"><label class="form-label">Razón social / Nombre</label><input class="form-control"></div>
+                <div class="col-md-8"><label class="form-label">Correo</label><input type="email" class="form-control" placeholder="facturas@cliente.com"></div>
+                <div class="col-md-4"><label class="form-label">Identificación fiscal</label><input class="form-control" placeholder="NIF / RFC"></div>
+                <div class="col-12"><label class="form-label">Dirección</label><input class="form-control" placeholder="Calle, número, ciudad"></div>
+                <div class="col-md-6"><label class="form-label">Moneda</label><select class="form-select"><option>CRC</option><option>USD</option></select></div>
+                <div class="col-md-6"><label class="form-label">Forma de pago</label><select class="form-select"><option>Tarjeta</option><option>Efectivo</option><option>Transferencia</option></select></div>
+                <div class="col-12 d-flex justify-content-end"><button type="button" class="btn btn-success">Emitir</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Historial</h5>
+              <div class="d-flex gap-2">
+                <input class="form-control form-control-sm" placeholder="Buscar factura…">
+                <button class="btn btn-success btn-sm"><i class="bi bi-search"></i></button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Folio</th><th class="text-end">Total</th><th></th></tr></thead>
+                  <tbody>
+                    <tr><td>INV-1201</td><td>Hoy 10:32</td><td>María Gómez</td><td>F-98214</td><td class="text-end">$210.00</td>
+                      <td class="text-end"><button class="btn btn-outline-secondary btn-sm">PDF</button></td></tr>
+                    <tr><td>INV-1202</td><td>Hoy 11:08</td><td>Alex Ruiz</td><td>F-98215</td><td class="text-end">$246.00</td>
+                      <td class="text-end"><button class="btn btn-outline-secondary btn-sm">PDF</button></td></tr>
+                    <tr><td>INV-1203</td><td>Hoy 11:20</td><td>Lin Chen</td><td>F-98216</td><td class="text-end">$50.00</td>
+                      <td class="text-end"><button class="btn btn-outline-secondary btn-sm">PDF</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="copyright text-center"><div class="container">© <strong><span>Hotel Villa Grace</span></strong></div></div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script><script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>
