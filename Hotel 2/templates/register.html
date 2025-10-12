@@ -27,7 +27,6 @@
 
   <!-- Estilos del proyecto -->
   <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
-  <!-- (Opcional) style.css propio del proyecto -->
   <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
 </head>
 
@@ -38,7 +37,6 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="{{ url_for('static', filename='assets/img/logo.webp') }}" alt="Hotel Villa Grace"> -->
         <h1 class="sitename">Hotel Villa Grace</h1>
       </a>
 
@@ -90,6 +88,22 @@
     <section class="section" id="register">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <!-- Mensajes del servidor (flash) -->
+        {% with msgs = get_flashed_messages(with_categories=true) %}
+          {% if msgs %}
+            <div class="row justify-content-center mb-3">
+              <div class="col-lg-7">
+                {% for cat, msg in msgs %}
+                  <div class="alert alert-{{ cat }} alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endwith %}
+
         <div class="row justify-content-center">
           <div class="col-lg-7">
             <div class="card shadow-sm border-0">
@@ -101,33 +115,58 @@
                   <p class="text-muted mb-0">Es rápido y gratuito.</p>
                 </div>
 
-                <form action="#" method="post" class="row g-3">
+                <!-- IMPORTANTE: el endpoint correcto es 'register_html' -->
+                <form action="{{ url_for('register_html') }}" method="post" class="row g-3" id="registerForm" novalidate>
                   <div class="col-md-6">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" id="nombre" name="nombre" class="form-control" required>
                   </div>
+
                   <div class="col-md-6">
-                    <label for="apellidos" class="form-label">Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" class="form-control" required>
+                    <label for="apellido" class="form-label">Apellidos</label>
+                    <!-- el backend espera 'apellido' -->
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="cedula" class="form-label">Cédula / Pasaporte</label>
+                    <input type="text" id="cedula" name="cedula" class="form-control" placeholder="1-2345-6789">
+                    <div class="form-text">Opcional; si lo ingresas debe ser único.</div>
                   </div>
 
                   <div class="col-md-6">
                     <label for="email" class="form-label">Correo electrónico</label>
                     <input type="email" id="email" name="email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
                   </div>
+
                   <div class="col-md-6">
                     <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+506 0000 0000">
+                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+506 0000 0000" required>
                   </div>
 
                   <div class="col-md-6">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" id="password" name="password" class="form-control" minlength="6" required>
+                    <input type="password" id="password" name="password" class="form-control" minlength="8" required>
+                    <div class="form-text">Mínimo 8 caracteres.</div>
                   </div>
+
                   <div class="col-md-6">
                     <label for="password2" class="form-label">Confirmar contraseña</label>
-                    <input type="password" id="password2" name="password2" class="form-control" minlength="6" required>
+                    <input type="password" id="password2" name="password2" class="form-control" minlength="8" required>
                   </div>
+
+                  <!-- (Opcional) permitir elegir rol; si lo omites, el backend asigna uno por defecto -->
+                  <!--
+                  <div class="col-md-6">
+                    <label for="rol_id" class="form-label">Rol</label>
+                    <select id="rol_id" name="rol_id" class="form-control">
+                      <option value="">Seleccionar…</option>
+                      <option value="1">Administrador</option>
+                      <option value="2">Cliente</option>
+                      <option value="3">Usuario</option>
+                    </select>
+                  </div>
+                  -->
 
                   <div class="col-12">
                     <div class="form-check">
@@ -241,5 +280,28 @@
 
   <!-- Main JS -->
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+  <!-- Validación mínima de contraseñas -->
+  <script>
+    (function () {
+      const form = document.getElementById('registerForm');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        const p1 = document.getElementById('password').value || '';
+        const p2 = document.getElementById('password2').value || '';
+        if (p1.length < 8) {
+          e.preventDefault();
+          alert('La contraseña debe tener al menos 8 caracteres.');
+          return false;
+        }
+        if (p1 !== p2) {
+          e.preventDefault();
+          alert('Las contraseñas no coinciden.');
+          return false;
+        }
+        return true;
+      });
+    })();
+  </script>
 </body>
 </html>
