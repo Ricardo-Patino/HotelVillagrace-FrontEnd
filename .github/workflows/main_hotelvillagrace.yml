@@ -9,6 +9,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+env:
+  PORT: 443
 
 jobs:
   build:
@@ -74,5 +76,7 @@ jobs:
         with:
           app-name: 'hotelvillagrace'
           slot-name: 'Production'
+          startup-command: python app.py
 
           
+
