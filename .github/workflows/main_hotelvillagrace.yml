@@ -9,8 +9,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-env:
-  PORT: 443
 
 jobs:
   build:
@@ -30,7 +28,6 @@ jobs:
       # The following section in your workflow is designed to catch build issues early on the client side, before deployment. This can be helpful for debugging and validation. However, if this step significantly increases deployment time and early detection is not critical for your workflow, you may remove this section to streamline the deployment process.
       - name: Create and Start virtual environment and Install dependencies
         run: |
-          cd Hotel\ 2
           python -m venv antenv
           source antenv/bin/activate
           pip install -r requirements.txt
@@ -66,9 +63,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3FFC6DBCB6F841A5AF6B8700BEE9E484 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BA52697209B740FAAE5A0D19D8FB16DE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B95A51E0FAA840708AF53A6A42522C75 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_311383CE54544B4F810C44A54B0BBA54 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_00426992DCE84A628DFF17097AE1E446 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_29E8B04BE54B4BA1A584DCA536B4F300 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -76,9 +73,4 @@ jobs:
         with:
           app-name: 'hotelvillagrace'
           slot-name: 'Production'
-          startup-command: python app.py
-
           
-
-
-
