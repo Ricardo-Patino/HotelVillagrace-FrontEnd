@@ -11,6 +11,7 @@ on:
   workflow_dispatch:
 env:
   PORT: 443
+  SCM_DO_BUILD_DURING_DEPLOYMENT: false
 
 jobs:
   build:
@@ -79,4 +80,5 @@ jobs:
           startup-command: python app.py
 
           
+
 
